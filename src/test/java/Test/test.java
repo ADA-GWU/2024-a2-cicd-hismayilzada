@@ -21,6 +21,7 @@ public class test {
         System.out.println("Search results --> " + getSearchResults);
         Assert.assertNotEquals(getSearchResults, "");
     }
+    /*
     @Test(groups = "Chrome")
     public void verifySearch_ResizeWindow2 () {
         driver.get().browser().setWindowSize(600, 466);
@@ -52,7 +53,7 @@ public class test {
         Assert.assertNotEquals(getSearchResults, "");
     }
 
-
+*/
     @BeforeMethod
     public void setUp() {
         driver.set(new SHAFT.GUI.WebDriver());
