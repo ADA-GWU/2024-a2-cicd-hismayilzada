@@ -1,1 +1,15 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/jwssRZI4)
+First, you clone the project and open it on IDE, Or you download the zip file and open it on IDE, both are fine. After that, you will see all the folders and files of the project. Important notes:
+
+Pre-requisites: jdk-17 and maven should be installed
+
+Set the properties including all the configurations
+
+Set the test Data from TestData
+
+Execute All tests using the command line opening a terminal on the project root path and running the following command:
+
+mvn clean test
+
+**************
+
+OR click the right button of the touchpad or mouse and choose run the test and it will automatically run it, and pop-up will appear which will take you to a website. 
