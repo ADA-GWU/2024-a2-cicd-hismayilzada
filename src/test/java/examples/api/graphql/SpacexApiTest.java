@@ -30,9 +30,9 @@ public class SpacexApiTest {
     @Test
     public void insertUser_checkuserName_shouldBeTheSame() {
 
-        Response response = spacexApiObjectModel.insertUser("ismail elshafeiy", "ismail's rocket");
-        GraphqlActions.assertGraphqlResponse(response, "data.insert_users.returning[0].name", "ismail elshafeiy");
-        GraphqlActions.assertGraphqlResponse(response, "data.insert_users.returning[0].rocket", "ismail's rocket");
+        Response response = spacexApiObjectModel.insertUser("Humay Ismayilzada", "humay's rocket");
+        GraphqlActions.assertGraphqlResponse(response, "data.insert_users.returning[0].name", "Humay Ismayilzada");
+        GraphqlActions.assertGraphqlResponse(response, "data.insert_users.returning[0].rocket", "humay's rocket");
 
     }
 
