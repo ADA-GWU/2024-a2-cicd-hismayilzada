@@ -1,0 +1,10 @@
+/target/
+/allure-results/
+.project
+.classpath
+*.bat
+*.sh
+*.prefs
+/.idea/
+/extent-reports/
+/allure-report/
