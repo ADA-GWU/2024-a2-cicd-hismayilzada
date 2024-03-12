@@ -37,7 +37,7 @@ public class BookingTestApis {
     public void createBooking() {
         // Create Booking
         Response createBookingRes = bookingApis.createBooking(
-                "ismail", "ElShafeiy",
+                "Humay", "Ismayilzada",
                 1000, true, "2022-07-01",
                 "2022-07-10", "IceCream");
         // Get the created booking id
@@ -52,14 +52,14 @@ public class BookingTestApis {
         String totalprice = RestActions.getResponseJSONValue(getBookingRes, "totalprice");
 
         // Validations 1
-        Validations.verifyThat().object(firstName).isEqualTo("ismail").perform();
-        Validations.verifyThat().object(lastName).isEqualTo("ElShafeiy").perform();
+        Validations.verifyThat().object(firstName).isEqualTo("Humay").perform();
+        Validations.verifyThat().object(lastName).isEqualTo("Ismayilzada").perform();
         Validations.verifyThat().object(checkin).isEqualTo("2022-07-01").perform();
         Validations.verifyThat().object(checkout).isEqualTo("2022-07-10").perform();
         Validations.verifyThat().object(totalprice).isEqualTo("1000").perform();
         // Validations 2
-        Validations.verifyThat().response(getBookingRes).extractedJsonValue("firstname").isEqualTo("ismail").perform();
-        Validations.verifyThat().response(getBookingRes).extractedJsonValue("lastname").isEqualTo("ElShafeiy").perform();
+        Validations.verifyThat().response(getBookingRes).extractedJsonValue("firstname").isEqualTo("Humay").perform();
+        Validations.verifyThat().response(getBookingRes).extractedJsonValue("lastname").isEqualTo("Ismayilzada").perform();
         Validations.verifyThat().response(getBookingRes).extractedJsonValue("bookingdates.checkin").isEqualTo("2022-07-01").perform();
         Validations.verifyThat().response(getBookingRes).extractedJsonValue("bookingdates.checkout").isEqualTo("2022-07-10").perform();
         Validations.verifyThat().response(getBookingRes).extractedJsonValue("totalprice").isEqualTo("1000").perform();
@@ -71,7 +71,7 @@ public class BookingTestApis {
 
     @Test(dependsOnMethods = "createBooking")
     public void deleteBooking() {
-        Response getBookingId = bookingApis.getBookingId("ismail", "ElShafeiy");
+        Response getBookingId = bookingApis.getBookingId("Humay", "Ismayilzada");
         String bookingId = RestActions.getResponseJSONValue(getBookingId, "bookingid[0]");
 
         Response deleteBooking = bookingApis.deleteBooking(bookingId);
