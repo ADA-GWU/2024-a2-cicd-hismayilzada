@@ -1,44 +1,21 @@
 ## Assignment #2. Automation of the service delivery
 ## Prerequisites
 
-## 1. Install Python
-* Make sure that Python is installed in your machine. Othweise, please refer to this page [Download Python](https://www.python.org/);
-* You should have Python editor/IDE depending on your choise. Convenient choises include [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows) and [Visual Studio Code](https://code.visualstudio.com/download);
-* Download the latest Python version . This assignmented required Python 3.8 or higher (mine is Python 3.11.8).
+1. Ensure Python is installed on your system. If not, you can download and install it from the [Python official website](https://www.python.org/). Additionally, choose a Python editor or Integrated Development Environment (IDE) according to your preference. Popular options include [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows) and [Visual Studio Code](https://code.visualstudio.com/download). Make sure to download the latest Python version; for this assignment, Python 3.8 or newer is required, with Python 3.11.8 being the version used.
 
-## 2. Install Selenium 
-#### Install Selenium using Python's package manager. Open the command prompt or terminal and type the following command:
-
+2. Install Selenium using Python's package manager. Open your command prompt or terminal and execute the following command:
+```bash
 pip install selenium
+```
 
-## 3. Install Python Environment
-#### You are required to use pipenv. To install pipenv, run the following command from terminal or command line:
-
+3. Set up your Python environment using pipenv. To install pipenv, run the following command in your terminal or command line:
+```bash
 pip install pipenv
+```
 
+4. Configure WebDriver setup. Ensure you have the latest versions of Google Chrome and Mozilla Firefox installed. You may choose other browsers compatible with Selenium WebDriver as well. Additionally, download and install the latest WebDriver executables for these browsers: [ChromeDriver](https://chromedriver.chromium.org/downloads) for Chrome and [geckodriver](https://github.com/mozilla/geckodriver/releases) for Firefox.
 
-## 4. SetUp Webdriver
-* You will neeed to install the latests versions of Google Chrome and Mozilla FireFox. You can prefer to use other browsers with Selenium WbeDriver;
-* You will need to install the latests versions of the WebDriver executables for these browsers: [ChromeDriver](https://chromedriver.chromium.org/downloads) for Chrome and [geckodriver](https://github.com/mozilla/geckodriver/releases) for FireFox.
-
-## 5. SetUp WebDriver for Windows OS
-#### In my case, I used ChromeDriver. To install ChromeDriver:
-*Step 1:* Go to [ChromeDriver - WebDriver for Chrome - Downloads page](https://chromedriver.chromium.org/downloads) to install the latest Wbedriver executables;
-
-*Step 2:* Click on the *The Chrome for Testing availability dashboard, indicated by redline under **Current Releases*;
-
-*Step 3:* Depending on your Chrome version, refer to one of the listed channels. In my case, I selected *Stable*;
-
-*Notes:* Type chrome://version/ to learn the version of your Chrome you use.
-
-*Step 4:* Select WebDriver from *Binary * column corresponding to your OS. I selected ChromeDriver for *win64* and install this [URL](https://storage.googleapis.com/chrome-for-testing-public/122.0.6261.111/win64/chromedriver-win64.zip). The link will be downloaded as zip file and unzip it;
-
-*Step 5:* Locate the chromedriver.exe from the folder to a place on your machine. I copied Chromedriver and pasted it in the C:\Program Files\Google\Chrome\Application. Also, don't forget to add the path to the Environment Variables, as C:\Program Files\Google\Chrome path, under System Variables -> Path.
-
-## 6. Run Python Scripts
-### Run test_search_feature.py file
-* click on the Python script and right-click, click *Run*. It will show the test case process and the result:
-
+5. Execute Python scripts. Run the `test_search_feature.py` file by clicking on it and selecting *Run* from the context menu. This action will display the test case process and its results.
 ```
 import unittest
 from selenium import webdriver
