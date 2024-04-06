@@ -13,7 +13,7 @@ class EcCouncil(unittest.TestCase):
         # Set up the webdriver instance for Chrome browser
         self.browser_driver = webdriver.Chrome()
         # Wait for the elements implicitly during the specified time
-        self.browser_driver.implicitly_wait(5)
+        self.browser_driver.implicitly_wait(3)
         # Go to the search page on the Dribble application
         self.browser_driver.get("https://www.eccouncil.org/?s=")
 
@@ -23,7 +23,7 @@ class EcCouncil(unittest.TestCase):
 
         try:
             # Wait for clickable search input
-            search_input = WebDriverWait(self.browser_driver, 5).until(EC.element_to_be_clickable((By.CLASS_NAME, "the7-search-form__input")))
+            search_input = WebDriverWait(self.browser_driver, 3).until(EC.element_to_be_clickable((By.CLASS_NAME, "the7-search-form__input")))
             # Waiting for the search input to become clickable
             search_input.send_keys(search_for_course)
             time.sleep(3)
@@ -37,7 +37,7 @@ class EcCouncil(unittest.TestCase):
 
         except StaleElementReferenceException:
             # Wait for the page to reload or element to become clickable again
-            search_input = WebDriverWait(self.browser_driver, 5).until(EC.element_to_be_clickable((By.CLASS_NAME, "the7-search-form__input")))
+            search_input = WebDriverWait(self.browser_driver, 3).until(EC.element_to_be_clickable((By.CLASS_NAME, "the7-search-form__input")))
             search_input.send_keys(search_for_course)
             time.sleep(3)
 
