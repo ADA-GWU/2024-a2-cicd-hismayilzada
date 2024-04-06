@@ -31,15 +31,15 @@ pip install pipenv
 
 *Notes:* Type chrome://version/ to learn the version of your Chrome you use.
 
-*Step 4:* Select WebDriver from *Binary * column corresponding to your OS. I selected ChromeDriver for *win64* and install this [URL](https://storage.googleapis.com/chrome-for-testing-public/122.0.6261.111/win64/chromedriver-win64.zip). The link will be download as zip file and unzip it;
+*Step 4:* Select WebDriver from *Binary * column corresponding to your OS. I selected ChromeDriver for *win64* and install this [URL](https://storage.googleapis.com/chrome-for-testing-public/122.0.6261.111/win64/chromedriver-win64.zip). The link will be downloaded as zip file and unzip it;
 
-*Step 5:* Locate the chromedriver.exe from the folder to a place on your machine. I copied chromedriver and pasted it in the C:\Program Files\Google\Chrome\Application. Also, don't forget to add path to the Environment Variables, as C:\Program Files\Google\Chrome path, under System Variables -> Path.
+*Step 5:* Locate the chromedriver.exe from the folder to a place on your machine. I copied Chromedriver and pasted it in the C:\Program Files\Google\Chrome\Application. Also, don't forget to add the path to the Environment Variables, as C:\Program Files\Google\Chrome path, under System Variables -> Path.
 
 ## 6. Run Python Scripts
 ### Run test_search_feature.py file
-* Just click on the python script and right click, click *Run*. It will showw the test case process and the result:
+* click on the Python script and right-click, click *Run*. It will show the test case process and the result:
 
-
+```
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
